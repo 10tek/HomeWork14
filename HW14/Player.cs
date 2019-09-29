@@ -9,13 +9,15 @@ namespace HW14
     class Player
     {
         public string Name { get; set; }
-        public List<Karta> Cards { get; set; }
+        public List<Karta> Cards { get; set; } = new List<Karta>();
 
-        public void ShowCards()
+        public void ShowCards(int xPos = 0)
         {
+            var i = 0;
             foreach(var card in Cards)
             {
-                Console.WriteLine($"{card.Suit} - {card.CardType}");
+                Console.SetCursorPosition(xPos, i++);
+                Console.Write($"{i}) {card.Suit} - {card.CardType}");
             }
         }
     }

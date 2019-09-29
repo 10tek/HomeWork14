@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW14
 {
-    public enum Enums
+    public enum CardTypes
     {
         Six,
         Seven,
